@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="clicker.css" />
+	</head>
+	<body>
+		<div class="overlay" id="overlay"></div>
+		<button class="mainbutton" id="mainbutton"></button>
+
+		<footer class="menu">
+			<div id="board" class="board">
+				<div class="stats" id="stats">
+					<div class="info">нажатий:<span class="info" id="cc">0</span></div>
+					<div class="info">
+						деньги:<span class="info" id="mc">0</span
+						><span id="mca" class="green"></span>
+					</div>
+					<div class="info">уровень:<span class="info" id="lc">1</span></div>
+				</div>
+			</div>
+			<div id="up" class="up">
+				<button class="upgrade" id="lev">
+					улучшить:<span id="uc">1</span>
+				</button>
+				<button class="upgrade" id="exrange">
+					уменьшить территорию:<span id="dc">1</span>
+				</button>
+			</div>
+		</footer>
+		<script src="clicker.js"></script>
+	</body>
+</html>
