@@ -48,7 +48,7 @@ let exprice = 1;
 let tprice = 1;
 
 Exrange.addEventListener("touchstart", () => {
-	if (moneycount <= exprice) {
+	if (moneycount >= exprice) {
 		moneycount = moneycount - exprice;
 		xrange += 10;
 		yrange += 10;
