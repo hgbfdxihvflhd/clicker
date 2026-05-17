@@ -108,7 +108,7 @@ lvl.addEventListener("touchstart", () => {
 
 buttn.addEventListener("touchstart", () => {
 	chance2 = getRandomInt(0, 9);
-	if (chance2 <= totalvl - Math.round(totalvl / 10)) {
+	if (chance2 <= totalvl%10) {
 		moneyadd = Math.round(totalvl / 10) + 1;
 		moneycount += moneyadd;
 		clickcount += 1;
