@@ -1,6 +1,3 @@
-//let prices = [10, 50, 100, 600, 1500, 5000, 7000, 15000, 50000];
-//prices=w,cp,tn,ir,ld,sv,vf,gd,pl
-
 let bcoords = document.getElementById("mainbutton");
 bcoords.style.position = "absolute";
 let ovl = document.getElementById("overlay");
@@ -108,18 +105,22 @@ lvl.addEventListener("touchstart", () => {
 
 buttn.addEventListener("touchstart", () => {
 	chance2 = getRandomInt(0, 9);
-	if (chance2 <= totalvl%10) {
+	if (totalvl % 10 === 0) {
 		moneyadd = Math.round(totalvl / 10) + 1;
+
 		moneycount += moneyadd;
-		clickcount += 1;
-		Tclickcount += 1;
 	} else {
-		if (totalvl < 5) {
-			moneyadd = 1;
+		if (chance2 <= totalvl % 10) {
+			moneyadd = Math.ceil(totalvl / 10) + 1;
 			moneycount += moneyadd;
 		} else {
-			moneyadd = Math.round(totalvl / 10);
-			moneycount += moneyadd;
+			if (totalvl < 5) {
+				moneyadd = 1;
+				moneycount += moneyadd;
+			} else {
+				moneyadd = Math.ceil(totalvl / 10);
+				moneycount += moneyadd;
+			}
 		}
 
 		clickcount += 1;
